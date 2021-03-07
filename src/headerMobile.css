@@ -1,0 +1,55 @@
+#for_mobile {
+    z-index: 1;
+    padding: 0% 10%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/*----------menu mobile -------*/
+
+#menu_mobile {
+    width: 100%;
+}
+
+#menu_mobile ul {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    right: 35%;
+    margin: 0 auto;
+}
+
+#menu_mobile li {
+    list-style-type: none;
+    text-align: center;
+    margin: 5% auto;
+}
+
+#menu_mobile a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #cd7f32;
+    display: inline-block;
+    width: 100%;
+}
+
+#menu_mobile a:hover {
+    text-decoration: underline;
+    text-decoration-color: #cd7f32;
+}
+
+#menu_mobile i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #898786;
+}
