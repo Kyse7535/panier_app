@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<Switch>
 				<Route exact path="/">
 					<Panier motif="accueil" />
