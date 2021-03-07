@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.1fa9c70f.chunk.css",
-    "main.js": "/static/js/main.16f74c44.chunk.js",
-    "main.js.map": "/static/js/main.16f74c44.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c276b833.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c276b833.js.map",
-    "static/css/2.2295ac45.chunk.css": "/static/css/2.2295ac45.chunk.css",
-    "static/js/2.c297478b.chunk.js": "/static/js/2.c297478b.chunk.js",
-    "static/js/2.c297478b.chunk.js.map": "/static/js/2.c297478b.chunk.js.map",
-    "static/js/3.7a2d9d2f.chunk.js": "/static/js/3.7a2d9d2f.chunk.js",
-    "static/js/3.7a2d9d2f.chunk.js.map": "/static/js/3.7a2d9d2f.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.2295ac45.chunk.css.map": "/static/css/2.2295ac45.chunk.css.map",
-    "static/css/main.1fa9c70f.chunk.css.map": "/static/css/main.1fa9c70f.chunk.css.map",
-    "static/js/2.c297478b.chunk.js.LICENSE.txt": "/static/js/2.c297478b.chunk.js.LICENSE.txt"
+    "main.css": "/panier_app/static/css/main.1fa9c70f.chunk.css",
+    "main.js": "/panier_app/static/js/main.7d8b0640.chunk.js",
+    "main.js.map": "/panier_app/static/js/main.7d8b0640.chunk.js.map",
+    "runtime-main.js": "/panier_app/static/js/runtime-main.05eec265.js",
+    "runtime-main.js.map": "/panier_app/static/js/runtime-main.05eec265.js.map",
+    "static/css/2.2295ac45.chunk.css": "/panier_app/static/css/2.2295ac45.chunk.css",
+    "static/js/2.c297478b.chunk.js": "/panier_app/static/js/2.c297478b.chunk.js",
+    "static/js/2.c297478b.chunk.js.map": "/panier_app/static/js/2.c297478b.chunk.js.map",
+    "static/js/3.7a2d9d2f.chunk.js": "/panier_app/static/js/3.7a2d9d2f.chunk.js",
+    "static/js/3.7a2d9d2f.chunk.js.map": "/panier_app/static/js/3.7a2d9d2f.chunk.js.map",
+    "index.html": "/panier_app/index.html",
+    "static/css/2.2295ac45.chunk.css.map": "/panier_app/static/css/2.2295ac45.chunk.css.map",
+    "static/css/main.1fa9c70f.chunk.css.map": "/panier_app/static/css/main.1fa9c70f.chunk.css.map",
+    "static/js/2.c297478b.chunk.js.LICENSE.txt": "/panier_app/static/js/2.c297478b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c276b833.js",
+    "static/js/runtime-main.05eec265.js",
     "static/css/2.2295ac45.chunk.css",
     "static/js/2.c297478b.chunk.js",
     "static/css/main.1fa9c70f.chunk.css",
-    "static/js/main.16f74c44.chunk.js"
+    "static/js/main.7d8b0640.chunk.js"
   ]
 }
