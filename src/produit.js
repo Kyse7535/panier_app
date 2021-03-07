@@ -27,7 +27,7 @@ const Produit = (props) => {
 					className="col-5 border p-2 d-flex align-items-center"
 					style={{ height: "60vh" }}>
 					<img
-						src={article.image}
+						src={process.env.PUBLIC_URL + article.image}
 						alt={article.titre}
 						className=" img-fluid"
 					/>

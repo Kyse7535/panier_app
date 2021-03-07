@@ -13,7 +13,10 @@ export const Boutique = (props) => {
 							<Link to={`/boutique/${article.titre}`}>
 								<div>
 									<img
-										src={article.image}
+										src={
+											process.env.PUBLIC_URL +
+											article.image
+										}
 										className="photo-boutique"
 										alt="ordinateur"
 									/>

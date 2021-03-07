@@ -14,7 +14,10 @@ const ContentPanier = (props) => {
 									className="d-flex justify-content-between align-items-center"
 									key={article.id}>
 									<img
-										src={article.image}
+										src={
+											process.env.PUBLIC_URL +
+											article.image
+										}
 										alt={article.titre}
 										className="photo-panier"
 									/>

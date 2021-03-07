@@ -6,12 +6,13 @@ const Accueil = (props) => {
 			<div
 				className="row "
 				style={{
-					backgroundImage: "url(/part1.jpg)",
+					backgroundImage: `url(${process.env.PUBLIC_URL}/part1.jpg)`,
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 					height: "100vh",
 				}}>
+				{console.log(`${process.env.PUBLIC_URL}/part1.jpg`)}
 				<div className="col-12 col-md-6 offset-md-3 text-white text-right px-0">
 					<div className="part-1 mx-0">
 						<h6 className="fw-bolder letter-spacing-3">
@@ -49,7 +50,7 @@ const Accueil = (props) => {
 					</Link>
 				</div>
 				<img
-					src="/Laptop-produit.jpg"
+					src={process.env.PUBLIC_URL + "/Laptop-produit.jpg"}
 					alt="ordi"
 					className="col-12 col-md-3  img-fluid "
 				/>
@@ -58,7 +59,7 @@ const Accueil = (props) => {
 				<div
 					className="col-12 part-3"
 					style={{
-						background: "url('/ipad.jpg') center no-repeat",
+						background: `url(${process.env.PUBLIC_URL}/ipad.jpg) center no-repeat`,
 						backgroundSize: "cover",
 						height: "450px",
 					}}>
