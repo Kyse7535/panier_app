@@ -17,7 +17,7 @@ export const Boutique = (props) => {
 											process.env.PUBLIC_URL +
 											article.image
 										}
-										className="photo-boutique"
+										className="photo-boutique img-fluid"
 										alt="ordinateur"
 									/>
 									<h5>{article.titre}</h5>

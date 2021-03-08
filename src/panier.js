@@ -1,12 +1,13 @@
 import "bootstrap/dist/css/bootstrap.css";
 import ContentPanier from "./contentPanier";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Article from "./article";
 import Accueil from "./accueil";
 import Apropos from "./apropos";
 import Contact from "./contact";
 import Header from "./header";
 import Footer from "./footer";
+import HeaderMobile from "./headerMobile";
 
 const ContentPage = (props) => {
 	if (props.motif === "accueil") {
@@ -24,12 +25,18 @@ const ContentPage = (props) => {
 
 const Panier = (props) => {
 	const [nbreArticle, setNbreArticle] = useState(0);
-	const [isOnLink, setIsOnLink] = useState(false);
+
 	const [listSelectedArticles, setListSlectedArticles] = useState([]);
+	const [width, setWidth] = useState(window.innerWidth);
 
-	const displayContentPanier = () => setIsOnLink(true);
+	const updateWidth = () => {
+		const width = window.innerWidth;
+		setWidth(width);
+	};
 
-	const removeContentPanier = () => setIsOnLink(false);
+	useEffect(() => {
+		window.addEventListener("resize", updateWidth);
+	});
 
 	const ajouterArticle = (e, quantite, articleAdded) => {
 		e.preventDefault();
@@ -42,17 +49,25 @@ const Panier = (props) => {
 				titre: articleAdded.titre,
 				image: articleAdded.image,
 				prix: articleAdded.prix,
-				quantite,
+				quantite: parseInt(quantite),
 			};
 			listSelectedArticles.push(article);
 			setListSlectedArticles(listSelectedArticles);
 		} else {
-			listSelectedArticles[index].quantite += quantite;
+			listSelectedArticles[index].quantite += parseInt(quantite);
 		}
-		console.log(listSelectedArticles);
 		countArticles();
 	};
 
+	const deleteArticles = (e, id) => {
+		e.preventDefault();
+		const index = listSelectedArticles.findIndex(
+			(article) => article.id === id,
+		);
+		listSelectedArticles.splice(index, 1);
+		setListSlectedArticles(listSelectedArticles);
+		countArticles();
+	};
 	const countArticles = () => {
 		let nbreArticle = 0;
 		for (let i = 0; i < listSelectedArticles.length; i++) {
@@ -70,24 +85,26 @@ const Panier = (props) => {
 		return nbreArticle;
 	};
 
-	const toggleDisplay = () =>
-		isOnLink ? { opacity: "1" } : { opacity: "0" };
-
 	return (
 		<>
-			<Header
-				nbrePanier={nbreArticle}
-				onPanier={displayContentPanier}
-				outPanier={removeContentPanier}
-			/>
+			{width < 1200 ? (
+				<HeaderMobile windowWidth={width} nbreArticle={nbreArticle} />
+			) : (
+				<Header nbrePanier={nbreArticle} />
+			)}
+
 			<main className="position-relative">
-				<ContentPanier
-					style={toggleDisplay()}
-					articles={listSelectedArticles}
-					coutTotal={coutTotal()}
-					onPanier={displayContentPanier}
-					outPanier={removeContentPanier}
-				/>
+				{width < 1200 ? (
+					<> </>
+				) : (
+					<ContentPanier
+						articles={listSelectedArticles}
+						coutTotal={coutTotal()}
+						className="panier"
+						deleteArticles={deleteArticles}
+					/>
+				)}
+
 				{
 					<ContentPage
 						addToPanier={ajouterArticle}

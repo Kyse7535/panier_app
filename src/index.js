@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Panier from "./panier";
 import "./index.css";
+
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
@@ -24,6 +25,9 @@ ReactDOM.render(
 				</Route>
 				<Route exact path="/a_propos">
 					<Panier motif="a_propos" />
+				</Route>
+				<Route exact path="*">
+					<Panier motif="accueil" />
 				</Route>
 			</Switch>
 		</Router>

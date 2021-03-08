@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import $ from "jquery";
 
 const Header = (props) => {
 	const [nbreArticle, setNbreArticle] = useState(0);
@@ -9,11 +10,15 @@ const Header = (props) => {
 		setNbreArticle(props.nbrePanier);
 	}, [props.nbrePanier]);
 
+	const displayPanier = () => $(".content-panier").fadeIn();
+
+	const hidePanier = () => $(".content-panier").fadeOut();
+
 	return (
-		<header>
+		<header className="menu-desktop">
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-6 offset-3 d-flex justify-content-between py-3">
+					<div className="col-8 offset-2 d-flex justify-content-between py-3">
 						<div>Mon logo</div>
 						<ul className="my-0 px-0 ">
 							<li className="mx-3 link-menu cursor-pointer">
@@ -44,7 +49,10 @@ const Header = (props) => {
 									Contact
 								</Link>
 							</li>
-							<li className="mx-3 link-menu cursor-pointer">
+							<li
+								className="mx-3 link-menu cursor-pointer panier"
+								onMouseEnter={displayPanier}
+								onMouseLeave={hidePanier}>
 								<Icon.Bag className="mr-2 " size="30" />
 								<Link
 									className="text-dark text-decoration-none"

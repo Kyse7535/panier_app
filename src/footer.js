@@ -4,7 +4,7 @@ const Footer = (props) => {
 	return (
 		<div className="container-fluid">
 			<div className="row">
-				<div className="col-12">
+				<div className="col-12 py-3">
 					<div>
 						<h6 className="letter-spacing-3 fw-bolder">
 							COMPAGNIE DE TECHNOLOGIE
