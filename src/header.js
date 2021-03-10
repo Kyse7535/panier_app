@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+import ContentPanier from "./contentPanier";
 
 const Header = (props) => {
 	const [nbreArticle, setNbreArticle] = useState(0);
@@ -10,10 +11,21 @@ const Header = (props) => {
 		setNbreArticle(props.nbrePanier);
 	}, [props.nbrePanier]);
 
-	const displayPanier = () => $(".content-panier").fadeIn();
+	const displayPanier = () => {
+		$(".panier").mouseover(() =>
+			$(".content-panier").css("display", "block"),
+		);
+	};
+	const hidePanier = () => {
+		$(".panier").mouseout(() =>
+			$(".content-panier").css("display", "none"),
+		);
+	};
 
-	const hidePanier = () => $(".content-panier").fadeOut();
+	
 
+	displayPanier();
+	hidePanier();
 	return (
 		<header className="menu-desktop">
 			<div className="container-fluid">
@@ -49,16 +61,18 @@ const Header = (props) => {
 									Contact
 								</Link>
 							</li>
-							<li
-								className="mx-3 link-menu cursor-pointer panier"
-								onMouseEnter={displayPanier}
-								onMouseLeave={hidePanier}>
+							<li className="mx-3 link-menu cursor-pointer position-relative panier">
 								<Icon.Bag className="mr-2 " size="30" />
 								<Link
 									className="text-dark text-decoration-none"
 									to="/panier">
 									Panier({nbreArticle})
 								</Link>
+								<ContentPanier
+									articles={props.articles}
+									coutTotal={props.coutTotal}
+									deleteArticles={props.deleteArticles}
+								/>
 							</li>
 						</ul>
 					</div>

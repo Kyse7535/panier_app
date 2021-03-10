@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-import ContentPanier from "./contentPanier";
 import React, { useEffect, useState } from "react";
 import Article from "./article";
 import Accueil from "./accueil";
@@ -90,21 +89,15 @@ const Panier = (props) => {
 			{width < 1200 ? (
 				<HeaderMobile windowWidth={width} nbreArticle={nbreArticle} />
 			) : (
-				<Header nbrePanier={nbreArticle} />
+				<Header
+					nbrePanier={nbreArticle}
+					articles={listSelectedArticles}
+					coutTotal={coutTotal()}
+					deleteArticles={deleteArticles}
+				/>
 			)}
 
 			<main className="position-relative">
-				{width < 1200 ? (
-					<> </>
-				) : (
-					<ContentPanier
-						articles={listSelectedArticles}
-						coutTotal={coutTotal()}
-						className="panier"
-						deleteArticles={deleteArticles}
-					/>
-				)}
-
 				{
 					<ContentPage
 						addToPanier={ajouterArticle}
