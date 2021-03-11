@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Panier from "./panier";
+import Home from "./home";
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
@@ -12,22 +12,22 @@ ReactDOM.render(
 		<Router basename={process.env.PUBLIC_URL}>
 			<Switch>
 				<Route exact path="/">
-					<Panier motif="accueil" />
+					<Home motif="accueil" />
 				</Route>
 				<Route exact path="/boutique">
-					<Panier motif="boutique" />
+					<Home motif="boutique" />
 				</Route>
 				<Route exact path="/contact">
-					<Panier motif="contact" />
+					<Home motif="contact" />
 				</Route>
 				<Route exact path={`/boutique/:titreArticle`}>
-					<Panier motif="produit" />
+					<Home motif="produit" />
 				</Route>
 				<Route exact path="/a_propos">
-					<Panier motif="a_propos" />
+					<Home motif="a_propos" />
 				</Route>
-				<Route exact path="*">
-					<Panier motif="accueil" />
+				<Route exact path="/panier">
+					<Home motif="panier" />
 				</Route>
 			</Switch>
 		</Router>

@@ -3,7 +3,7 @@ import * as Icon from "react-bootstrap-icons";
 
 const ContentPanier = (props) => {
 	return (
-		<span className=" mt-2 mx-0 z-index-2 content-panier bg-white border border-dark px-0">
+		<span className=" mt-2 mx-0 z-index-2  content-panier bg-white border border-dark px-0">
 			{props.articles.length === 0 ? (
 				<p className="m-0">Votre panier est vide</p>
 			) : (

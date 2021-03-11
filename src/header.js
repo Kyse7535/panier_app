@@ -22,8 +22,6 @@ const Header = (props) => {
 		);
 	};
 
-	
-
 	displayPanier();
 	hidePanier();
 	return (
@@ -62,10 +60,10 @@ const Header = (props) => {
 								</Link>
 							</li>
 							<li className="mx-3 link-menu cursor-pointer position-relative panier">
-								<Icon.Bag className="mr-2 " size="30" />
 								<Link
 									className="text-dark text-decoration-none"
 									to="/panier">
+									<Icon.Bag className="mr-2 " size="30" />
 									Panier({nbreArticle})
 								</Link>
 								<ContentPanier

@@ -84,6 +84,14 @@ html {
     width: 18%;
 }
 
+.w-21 {
+    width: 21%;
+}
+
+.w-12 {
+    width: 12%;
+}
+
 .center-div {
     margin: 0 auto;
     float: none;
@@ -129,7 +137,7 @@ html {
 .content-panier {
     position: absolute;
     top: 80%;
-    width: 250px;
+    width: 350px;
     display: none;
     transition: display 2s;
 }
@@ -137,4 +145,8 @@ html {
 .trier {
     position: absolute;
     right: 15%;
+}
+
+.liste-panier {
+    font-size: 5vw;
 }
