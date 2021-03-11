@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/panier_app/static/css/main.3fcc4ecf.chunk.css",
-    "main.js": "/panier_app/static/js/main.40d93de1.chunk.js",
-    "main.js.map": "/panier_app/static/js/main.40d93de1.chunk.js.map",
+    "main.css": "/panier_app/static/css/main.355d061e.chunk.css",
+    "main.js": "/panier_app/static/js/main.4b02634c.chunk.js",
+    "main.js.map": "/panier_app/static/js/main.4b02634c.chunk.js.map",
     "runtime-main.js": "/panier_app/static/js/runtime-main.f72ae566.js",
     "runtime-main.js.map": "/panier_app/static/js/runtime-main.f72ae566.js.map",
     "static/css/2.2295ac45.chunk.css": "/panier_app/static/css/2.2295ac45.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.523c517f.chunk.js.map": "/panier_app/static/js/3.523c517f.chunk.js.map",
     "index.html": "/panier_app/index.html",
     "static/css/2.2295ac45.chunk.css.map": "/panier_app/static/css/2.2295ac45.chunk.css.map",
-    "static/css/main.3fcc4ecf.chunk.css.map": "/panier_app/static/css/main.3fcc4ecf.chunk.css.map",
+    "static/css/main.355d061e.chunk.css.map": "/panier_app/static/css/main.355d061e.chunk.css.map",
     "static/js/2.3a1322c5.chunk.js.LICENSE.txt": "/panier_app/static/js/2.3a1322c5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f72ae566.js",
     "static/css/2.2295ac45.chunk.css",
     "static/js/2.3a1322c5.chunk.js",
-    "static/css/main.3fcc4ecf.chunk.css",
-    "static/js/main.40d93de1.chunk.js"
+    "static/css/main.355d061e.chunk.css",
+    "static/js/main.4b02634c.chunk.js"
   ]
 }
