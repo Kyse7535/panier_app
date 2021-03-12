@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = (props) => {
 	return (
-		<div className="container-fluid position-absolute bottom-0 left-0 right-0">
+		<div className="container-fluid">
 			<div className="row">
 				<div className="col-12 py-3">
 					<div>
